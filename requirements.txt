@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+python-jose[cryptography]
+python-multipart
+psycopg2-binary
+pydantic-settings
+aiofiles
+fastapi-cache2[redis]
+redis
+aioredis
+starlette
+pydantic
+passlib
+pydantic_core
+sqlmodel
