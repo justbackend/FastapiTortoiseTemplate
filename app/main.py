@@ -6,9 +6,7 @@ from fastapi_cache.backends.redis import RedisBackend
 
 from .initializer import init
 from .service.redis_service import get_redis, get_cache
-from .utils.middlewares import handle_integrity_errors
 from app.user.routes import user_router
-from starlette.middleware.base import BaseHTTPMiddleware
 from starlette.middleware.cors import CORSMiddleware
 
 

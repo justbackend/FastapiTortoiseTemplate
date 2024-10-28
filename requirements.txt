@@ -13,3 +13,6 @@ pydantic
 passlib
 pydantic_core
 sqlmodel
+aerich
+tortoise-orm
+asyncpg
