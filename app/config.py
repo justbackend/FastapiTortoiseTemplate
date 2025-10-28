@@ -40,7 +40,7 @@ class Settings(BaseSettings):
         return MultiHostUrl.build(
             scheme="redis",
             host=self.REDIS_HOST,
-            port=self.REDIS_PORT,
+            port=6378,
             path=self.REDIS_DB,
         )
 
@@ -95,9 +95,17 @@ class Settings(BaseSettings):
     @property
     def postgres_url_tortoise(self) -> str:
         """
-        This is a computed property that generates a PostgreSQL URL string.
+        Build a PostgreSQL URL for Tortoise-ORM.
+
+        Example:
+            postgres://user:pass@myhost:5432/mydb
         """
-        return f"postgres://{self.POSTGRES_USER}:{self.POSTGRES_PASSWORD}@{self.POSTGRES_HOST}/{self.POSTGRES_DB}"
+        return (
+            f"postgres://"
+            f"{self.POSTGRES_USER}:{self.POSTGRES_PASSWORD}"
+            f"@{self.POSTGRES_HOST}:5431"
+            f"/{self.POSTGRES_DB}"
+        )
 
 
     class Config:

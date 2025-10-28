@@ -10,7 +10,7 @@ from app.user.models import User
 from app.user.schemas import UserCreate
 from fastapi import HTTPException
 
-from app.user.views import register
+from app.user.services import register
 
 user_router = APIRouter(
     prefix='/user'
